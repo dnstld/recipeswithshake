@@ -7,6 +7,19 @@
     "pt": "Português",
     "en": "English"
   },
+  "gallery": {
+    "title": "What are the recipes in the E-book?",
+    "sweet-recipes": "With the Sweet Life E-book, you will learn 10 protein-rich sweet recipes, consisting of 5 cold and 5 hot recipes.",
+    "cold-recipes": "Cold recipes: Fruit Smoothie, Fruit Yogurt, Overnight Oats, Frozen treat, and Chocolate Cup Delight.",
+    "hot-recipes": "Hot recipes: Pancake, Brownie, Mug Cake, Oatmeal Porridge, and Hot Chocolate.",
+    "swiper-title": "Check out the photos of the recipes",
+    "geladinho": "Frozen popsicle dessert",
+    "overnight": "Overnight oats breakfast",
+    "smoothie": "Fruit smoothie",
+    "uva": "Fresh grapes",
+    "yogurte": "Yogurt with toppings",
+    "cta": "I want the e-book"
+  },
   "footer": {
     "copyright": "© 2023 - Gisele Toledo - All Rights Reserved"
   }

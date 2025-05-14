@@ -1,5 +1,5 @@
-import Galery from "@/components/Galery";
-import { AbstractIntlMessages, useTranslations } from "next-intl";
+import Gallery from "@/components/Gallery";
+import { AbstractIntlMessages } from "next-intl";
 import { getMessages } from "next-intl/server";
 
 export async function generateMetadata() {
@@ -16,11 +16,9 @@ export async function generateMetadata() {
 }
 
 export default function Home() {
-  // const t = useTranslations("meta");
-
   return (
     <main className="w-full">
-      <Galery />
+      <Gallery />
     </main>
   );
 }

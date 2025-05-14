@@ -37,7 +37,8 @@ export default async function RootLayout({
         className={`${geistSans.variable} ${geistMono.variable} antialiased min-h-screen`}
       >
         <NextIntlClientProvider>
-          <div className="mx-auto max-w-6xl flex flex-col min-h-screen px-4">
+          {/* <div className="mx-auto max-w-6xl flex flex-col min-h-screen px-4"> */}
+          <div className="flex flex-col min-h-screen">
             <LocaleBar />
             <main className="flex-grow">{children}</main>
             <Footer />
