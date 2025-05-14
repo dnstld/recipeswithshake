@@ -1,3 +1,4 @@
+import Galery from "@/components/Galery";
 import { AbstractIntlMessages, useTranslations } from "next-intl";
 import { getMessages } from "next-intl/server";
 
@@ -15,12 +16,11 @@ export async function generateMetadata() {
 }
 
 export default function Home() {
-  const t = useTranslations("meta");
+  // const t = useTranslations("meta");
 
   return (
-    <main className="w-full text-center">
-      <h1 className="text-4xl font-bold mb-4">{t("title")}</h1>
-      <p className="text-lg">{t("description")}</p>
+    <main className="w-full">
+      <Galery />
     </main>
   );
 }

@@ -34,14 +34,12 @@ export default async function RootLayout({
         <meta name="viewport" content="width=device-width, initial-scale=1" />
       </head>
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased bg-black text-white min-h-screen`}
+        className={`${geistSans.variable} ${geistMono.variable} antialiased min-h-screen`}
       >
         <NextIntlClientProvider>
           <div className="mx-auto max-w-6xl flex flex-col min-h-screen px-4">
             <LocaleBar />
-            <main className="flex-grow flex items-center justify-center">
-              {children}
-            </main>
+            <main className="flex-grow">{children}</main>
             <Footer />
           </div>
         </NextIntlClientProvider>
