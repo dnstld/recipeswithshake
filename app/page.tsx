@@ -1,4 +1,5 @@
 import Gallery from "@/components/Gallery";
+import Hero from "@/components/Hero";
 import { AbstractIntlMessages } from "next-intl";
 import { getMessages } from "next-intl/server";
 
@@ -18,6 +19,7 @@ export async function generateMetadata() {
 export default function Home() {
   return (
     <main className="w-full">
+      <Hero />
       <Gallery />
     </main>
   );
