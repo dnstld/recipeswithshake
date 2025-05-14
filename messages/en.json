@@ -7,6 +7,12 @@
     "pt": "Português",
     "en": "English"
   },
+  "timer": {
+    "title": "Check out the unmissable offer…",
+    "hours": "hours",
+    "minutes": "minutes",
+    "seconds": "seconds"
+  },
   "hero": {
     "title": "Sweet Life",
     "subtitle": "Indulge in Healthy Protein-Packed Treats",
