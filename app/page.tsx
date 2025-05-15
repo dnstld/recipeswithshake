@@ -1,3 +1,4 @@
+import Benefits from "@/components/Benefits";
 import Gallery from "@/components/Gallery";
 import Hero from "@/components/Hero";
 import Timer from "@/components/Timer";
@@ -22,6 +23,7 @@ export default function Home() {
     <main className="w-full">
       <Timer />
       <Hero />
+      <Benefits />
       <Gallery />
     </main>
   );
