@@ -1,3 +1,4 @@
+import Questions from "@/components/Questions";
 import About from "@/components/About";
 import Benefits from "@/components/Benefits";
 import Feedback from "@/components/Feedback";
@@ -29,6 +30,7 @@ export default function Home() {
       <Gallery />
       <Feedback />
       <About />
+      <Questions />
     </main>
   );
 }

@@ -90,6 +90,29 @@
     "sweet": "Founder of the Sweet Life Project since February 2023",
     "shielded": "Founder of the Shielded Women Project since December 2024"
   },
+  "questions": {
+    "title": "Frequently asked questions",
+    "question-1": {
+      "question": "How to access the e-books after purchase?",
+      "answer": "E-books through the email you registered during the purchase (pay close attention to filling in the email field correctly). You can also access your products through the Eduzz website or app."
+    },
+    "question-2": {
+      "question": "Is there any warranty?",
+      "answer": "Yes, there is a 7-day guarantee. If you conclude that the digital products purchased did not add value to your goals, you can request a refund without any bureaucracy."
+    },
+    "question-3": {
+      "question": "What are the payment methods?",
+      "answer": "Credit card"
+    },
+    "question-4": {
+      "question": "Are the recipes suitable for individuals with diabetes, lactose intolerance, or gluten sensitivity?",
+      "answer": "Yes, just buy zero sugar, zero lactose (or vegan) and zero gluten ingredients and supplements."
+    },
+    "question-5": {
+      "question": "What is the access time for the E-books?",
+      "answer": "Lifetime access."
+    }
+  },
   "footer": {
     "copyright": "© 2023 - Gisele Toledo - Todos os Direitos Reservados"
   }
