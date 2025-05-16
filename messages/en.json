@@ -40,6 +40,45 @@
     "yogurte": "Yogurt with toppings",
     "cta": "I want the e-book"
   },
+  "feedback": {
+    "title": "Customer feedback",
+    "customer-1": {
+      "name": "Giulia Vedovato",
+      "alt": "Giulia Vedovato photo",
+      "social": "@giuliavedovato",
+      "text": "Hey Gi, I made the pancake and loved it. it really satisfies the craving for something sweet, fills you up a lot, and is very easy to make."
+    },
+    "customer-2": {
+      "name": "Felipe Augusto",
+      "alt": "Felipe Augusto photo",
+      "social": "@felipeugusto",
+      "text": "Gi, I am in love with sweets, especially peanut sweets. I learned the super easy recipe for Frozen treat with peanut butter, and now I can’t stop making it! I highly recommend it!"
+    },
+    "customer-3": {
+      "name": "Claudia Bassani",
+      "alt": "Claudia Bassani photo",
+      "social": "@claudia_c_a_bassani",
+      "text": "I loved the strawberry smoothie–it looked like a milkshake! Besides being super tasty, it really satisfies hunger! It was also super easy to make!"
+    },
+    "customer-4": {
+      "name": "Rosângela Araújo",
+      "alt": "Rosângela Araújo photo",
+      "social": "@rosangela_hairstylist",
+      "text": "I like all the recipes in the E-book, but my favorite is the cake with peanut butter; it satisfies my sweet cravings and is still tasty!"
+    },
+    "customer-5": {
+      "name": "Mariele Aline",
+      "alt": "Mariele Aline photo",
+      "social": "@mariele9323",
+      "text": "Oh my God, I loved the chocolate in the cup! It’s delicious! Absolutely divine chocolate—simply the best! This combination with grapes is perfection!"
+    },
+    "customer-6": {
+      "name": "Thais Fernanda",
+      "alt": "Thais Fernanda photo",
+      "social": "@thais.almeida1",
+      "text": "Hi Gi! I loved the E-book. It has very well-crafted recipes that are filling and also help satisfy that sweet tooth! I loved the yogurt and the smoothie with little fruits, but my favorite recipe is definitely the chocolate mug cake. It’s so good…"
+    }
+  },
   "footer": {
     "copyright": "© 2023 - Gisele Toledo - All Rights Reserved"
   }

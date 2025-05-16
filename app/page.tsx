@@ -1,4 +1,5 @@
 import Benefits from "@/components/Benefits";
+import Feedback from "@/components/Feedback";
 import Gallery from "@/components/Gallery";
 import Hero from "@/components/Hero";
 import Timer from "@/components/Timer";
@@ -25,6 +26,7 @@ export default function Home() {
       <Hero />
       <Benefits />
       <Gallery />
+      <Feedback />
     </main>
   );
 }
