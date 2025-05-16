@@ -1,3 +1,4 @@
+import About from "@/components/About";
 import Benefits from "@/components/Benefits";
 import Feedback from "@/components/Feedback";
 import Gallery from "@/components/Gallery";
@@ -27,6 +28,7 @@ export default function Home() {
       <Benefits />
       <Gallery />
       <Feedback />
+      <About />
     </main>
   );
 }
