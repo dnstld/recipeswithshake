@@ -5,7 +5,6 @@ const nextConfig = {
   trailingSlash: true,
   basePath: "/espacogitoledo",
   assetPrefix: "/espacogitoledo/",
-  distDir: "out",
 };
 
 const withNextIntl = createNextIntlPlugin();

@@ -6,8 +6,7 @@
     "dev": "next dev --turbopack",
     "build": "next build",
     "start": "next start",
-    "export": "next export",
-    "static": "next build && next export",
+    "static": "next build",
     "lint": "next lint",
     "next-intl:validate": "node -e \"require('./next-intl.config.cjs')\""
   },

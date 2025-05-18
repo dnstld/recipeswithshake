@@ -13,6 +13,8 @@ import { getMessages } from "next-intl/server";
 import Parallax from "@/components/Parallax";
 import Footer from "@/components/Footer";
 
+export const dynamic = "force-dynamic";
+
 export async function generateMetadata() {
   const messages: AbstractIntlMessages = await getMessages();
   const title =
