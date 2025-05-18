@@ -1,35 +1,33 @@
 name: setup-node
+description: "Setup Node.js ⚙️ - Cache dependencies ⚡ - Install dependencies 🔧"
+inputs:
+  node-version:
+    description: "Node.js version"
+    required: false
+    default: "20"
+runs:
+  using: "composite"
+  steps:
+    - name: Checkout repository 📦
+      uses: actions/checkout@v4
 
-on:
-  push:
-    branches: [main]
-  pull_request:
-    branches: [main]
+    - name: Setup Node.js ⚙️
+      uses: actions/setup-node@v4
+      with:
+        node-version: ${{ inputs.node-version }}
+        cache: "yarn"
 
-jobs:
-  setup-node:
-    runs-on: ubuntu-latest
-    steps:
-      - name: Checkout repository
-        uses: actions/checkout@v4
+    - name: Cache dependencies ⚡
+      id: cache_dependencies
+      uses: actions/cache@v4
+      with:
+        path: |
+          node_modules
+          ~/.cache/yarn
+        key: yarn-${{ runner.os }}-${{ hashFiles('**/yarn.lock') }}
+        restore-keys: |
+          yarn-${{ runner.os }}-
 
-      - name: Setup Node.js ⚙️
-        uses: actions/setup-node@v4
-        with:
-          node-version: 20
-          cache: "yarn"
-
-      - name: Cache dependencies ⚡
-        id: cache_dependencies
-        uses: actions/cache@v4
-        with:
-          path: |
-            node_modules
-            ~/.cache/yarn
-          key: yarn-${{ runner.os }}-${{ hashFiles('**/yarn.lock') }}
-          restore-keys: |
-            yarn-${{ runner.os }}-
-
-      - name: Install dependencies 🔧
-        if: steps.cache_dependencies.outputs.cache-hit != 'true'
-        run: yarn install --frozen-lockfile
+    - name: Install dependencies 🔧
+      run: yarn install --frozen-lockfile
+      shell: bash

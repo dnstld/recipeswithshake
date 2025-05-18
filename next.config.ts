@@ -2,17 +2,15 @@
 const nextConfig = {
   output: "export",
   trailingSlash: true,
+  basePath: "/espacogitoledo",
+  assetPrefix: "/espacogitoledo/",
   images: {
     unoptimized: true,
   },
-  // Required for GitHub Pages deployment with custom repo name
-  basePath: "/espacogitoledo",
-  assetPrefix: "/espacogitoledo/",
-
-  // Skip generation of files that require server-side rendering
   experimental: {
     missingSuspenseWithCSRBailout: false,
   },
+  distDir: "out",
 };
 
 module.exports = nextConfig;
