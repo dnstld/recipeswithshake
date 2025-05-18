@@ -1,16 +1,18 @@
-import { NextConfig } from "next";
-import createNextIntlPlugin from "next-intl/plugin";
-
-const nextConfig: NextConfig = {
-  basePath: "/espacogitoledo",
-  assetPrefix: "/espacogitoledo",
+/** @type {import('next').NextConfig} */
+const nextConfig = {
   output: "export",
-  reactStrictMode: true,
   trailingSlash: true,
   images: {
     unoptimized: true,
   },
+  // Required for GitHub Pages deployment with custom repo name
+  basePath: "/espacogitoledo",
+  assetPrefix: "/espacogitoledo/",
+
+  // Skip generation of files that require server-side rendering
+  experimental: {
+    missingSuspenseWithCSRBailout: false,
+  },
 };
 
-const withNextIntl = createNextIntlPlugin();
-export default withNextIntl(nextConfig);
+module.exports = nextConfig;
