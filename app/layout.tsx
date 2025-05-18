@@ -2,10 +2,11 @@ import { ReactNode } from "react";
 import { Geist, Geist_Mono } from "next/font/google";
 import { getLocale } from "next-intl/server";
 import { NextIntlClientProvider } from "next-intl";
+import { AppRouterCacheProvider } from "@mui/material-nextjs/v15-appRouter";
+import { ThemeProvider } from "@mui/material/styles";
+import theme from "@/mui/theme";
 
-import LocaleBar from "@/components/LocaleBar";
 import "./globals.css";
-import Footer from "@/components/Footer";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -14,6 +15,7 @@ const geistSans = Geist({
 });
 
 const geistMono = Geist_Mono({
+  weight: ["300", "400", "500", "700"],
   variable: "--font-geist-mono",
   subsets: ["latin"],
   display: "swap",
@@ -37,12 +39,14 @@ export default async function RootLayout({
         className={`${geistSans.variable} ${geistMono.variable} antialiased min-h-screen`}
       >
         <NextIntlClientProvider>
-          {/* <div className="mx-auto max-w-6xl flex flex-col min-h-screen px-4"> */}
-          <div className="flex flex-col min-h-screen">
-            <LocaleBar />
-            <main className="flex-grow">{children}</main>
-            <Footer />
-          </div>
+          <AppRouterCacheProvider>
+            <ThemeProvider theme={theme}>
+              {/* <div className="mx-auto max-w-6xl flex flex-col min-h-screen px-4"> */}
+              <div className="flex flex-col min-h-screen">
+                <main className="flex-grow">{children}</main>
+              </div>
+            </ThemeProvider>
+          </AppRouterCacheProvider>
         </NextIntlClientProvider>
       </body>
     </html>

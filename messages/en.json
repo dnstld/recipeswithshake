@@ -5,10 +5,11 @@
   },
   "locale": {
     "pt": "Português",
-    "en": "English"
+    "en": "English",
+    "es": "Español"
   },
   "timer": {
-    "title": "Check out the unmissable offer…",
+    "title": "Don't Miss Out - Secure Your Special Price Now!",
     "hours": "hours",
     "minutes": "minutes",
     "seconds": "seconds"
@@ -29,9 +30,15 @@
   },
   "gallery": {
     "title": "What are the recipes in the E-book?",
-    "sweet-recipes": "With the Sweet Life E-book, you will learn 10 protein-rich sweet recipes, consisting of 5 cold and 5 hot recipes.",
-    "cold-recipes": "Cold recipes: Fruit Smoothie, Fruit Yogurt, Overnight Oats, Frozen treat, and Chocolate Cup Delight.",
-    "hot-recipes": "Hot recipes: Pancake, Brownie, Mug Cake, Oatmeal Porridge, and Hot Chocolate.",
+    "description": "With the Sweet Life E-book, you will learn 10 protein-rich sweet recipes, consisting of 5 cold and 5 hot recipes.",
+    "cold-recipes": {
+      "title": "Cold recipes",
+      "description": "Fruit Smoothie, Fruit Yogurt, Overnight Oats, Frozen treat, and Chocolate Cup Delight."
+    },
+    "hot-recipes": {
+      "title": "Hot recipes",
+      "description": "Pancake, Brownie, Mug Cake, Oatmeal Porridge, and Hot Chocolate."
+    },
     "swiper-title": "Check out the photos of the recipes",
     "geladinho": "Frozen popsicle dessert",
     "overnight": "Overnight oats breakfast",
@@ -92,6 +99,7 @@
   },
   "questions": {
     "title": "Frequently asked questions",
+    "cta": "I want the e-book",
     "question-1": {
       "question": "How to access the e-books after purchase?",
       "answer": "E-books through the email you registered during the purchase (pay close attention to filling in the email field correctly). You can also access your products through the Eduzz website or app."

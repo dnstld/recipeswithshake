@@ -32,10 +32,11 @@ const Timer = () => {
   const formattedSeconds = seconds.toString().padStart(2, "0");
 
   return (
-    <section className="p-4 bg-red-800 text-white md:text-xl">
-      <div className="flex flex-col items-center">
+    <section className="bg-rose-900 text-white">
+      <div className="mx-auto max-w-full lg:max-w-7xl flex flex-col items-center p-2 md:p-4">
         <p className="font-bold mb-2">{t("title")}</p>
-        <div className="flex items-center justify-center gap-1 md:gap-2">
+
+        <div className="flex justify-center gap-1 md:gap-2">
           <div className="flex flex-col items-center">
             <span className="text-2xl md:text-3xl font-bold">
               {formattedHours}

@@ -8,6 +8,9 @@ import {
   SUPPORTED_LOCALES,
 } from "@/i18n/constants";
 import { useTranslations } from "next-intl";
+import { Button, ButtonGroup } from "@mui/material";
+import TurnedInIcon from "@mui/icons-material/TurnedIn";
+import TurnedInNotIcon from "@mui/icons-material/TurnedInNot";
 
 const LocaleBar = () => {
   const [locale, setLocale] = useState(DEFAULT_LOCALE);
@@ -42,25 +45,32 @@ const LocaleBar = () => {
     }
   };
 
+  const localeIcon = (loc: string) => {
+    if (loc === locale) {
+      return <TurnedInIcon fontSize="small" />;
+    } else {
+      return <TurnedInNotIcon fontSize="small" />;
+    }
+  };
+
   return (
-    <div className="flex gap-2 justify-end p-2">
-      <button
-        className={`border p-2 font-bold rounded-md text-xs ${
-          locale === "en" && "bg-white text-black"
-        }`}
-        onClick={() => changeLocale("en")}
-      >
-        {t("en")}
-      </button>
-      <button
-        className={`border p-2 font-bold rounded-md text-xs ${
-          locale === "pt" && "bg-white text-black"
-        }`}
-        onClick={() => changeLocale("pt")}
-      >
-        {t("pt")}
-      </button>
-    </div>
+    <nav>
+      <div className="max-w-full flex justify-center lg:justify-end p-2">
+        <ButtonGroup variant="outlined" color="secondary" size="small">
+          {SUPPORTED_LOCALES.map((loc) => (
+            <Button
+              loading={false}
+              loadingPosition="start"
+              startIcon={localeIcon(loc)}
+              key={loc}
+              onClick={() => changeLocale(loc)}
+            >
+              {t(loc)}
+            </Button>
+          ))}
+        </ButtonGroup>
+      </div>
+    </nav>
   );
 };
 

@@ -3,10 +3,15 @@ import About from "@/components/About";
 import Benefits from "@/components/Benefits";
 import Feedback from "@/components/Feedback";
 import Gallery from "@/components/Gallery";
+import Recipes from "@/components/Recipes";
 import Hero from "@/components/Hero";
+import Cta from "@/components/Cta";
 import Timer from "@/components/Timer";
+import LocaleBar from "@/components/LocaleBar";
 import { AbstractIntlMessages } from "next-intl";
 import { getMessages } from "next-intl/server";
+import Parallax from "@/components/Parallax";
+import Footer from "@/components/Footer";
 
 export async function generateMetadata() {
   const messages: AbstractIntlMessages = await getMessages();
@@ -23,14 +28,23 @@ export async function generateMetadata() {
 
 export default function Home() {
   return (
-    <main className="w-full">
+    <main className="w-full md:text-lg bg-rose-200 text-center">
+      <LocaleBar />
       <Timer />
       <Hero />
+      <Parallax
+        backgroundImage="/images/smoothie-bg.jpeg"
+        className="hidden md:block"
+      />
       <Benefits />
+      <Recipes />
       <Gallery />
+      <Cta />
       <Feedback />
       <About />
       <Questions />
+      <Cta />
+      <Footer />
     </main>
   );
 }

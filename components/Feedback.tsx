@@ -1,5 +1,5 @@
 import { useTranslations } from "next-intl";
-import Image from "next/image";
+import { Avatar, Card, CardContent, Divider, Rating } from "@mui/material";
 
 const Feedback = () => {
   const t = useTranslations("feedback");
@@ -7,49 +7,42 @@ const Feedback = () => {
   const customers = [
     {
       avatar: "/images/customers/giulia-vedovato.jpg",
-      alt: t("alt"),
+      alt: t("customer-1.alt"),
       name: t("customer-1.name"),
       social: t("customer-1.social"),
       text: t("customer-1.text"),
     },
     {
       avatar: "/images/customers/felipe-augusto.jpg",
-      alt: t("alt"),
+      alt: t("customer-2.alt"),
       name: t("customer-2.name"),
       social: t("customer-2.social"),
       text: t("customer-2.text"),
     },
     {
       avatar: "/images/customers/claudia-bassani.jpg",
-      alt: t("alt"),
+      alt: t("customer-3.alt"),
       name: t("customer-3.name"),
       social: t("customer-3.social"),
       text: t("customer-3.text"),
     },
     {
       avatar: "/images/customers/rosangela-araujo.jpg",
-      alt: t("alt"),
+      alt: t("customer-4.alt"),
       name: t("customer-4.name"),
       social: t("customer-4.social"),
       text: t("customer-4.text"),
     },
     {
       avatar: "/images/customers/mariele-aline.jpg",
-      alt: t("yogurte"),
+      alt: t("customer-5.alt"),
       name: t("customer-5.name"),
       social: t("customer-5.social"),
       text: t("customer-5.text"),
     },
     {
       avatar: "/images/customers/thais-fernanda.jpg",
-      alt: t("alt"),
-      name: t("customer-6.name"),
-      social: t("customer-6.social"),
-      text: t("customer-6.text"),
-    },
-    {
-      avatar: "/images/customers/thais-fernanda.jpg",
-      alt: t("yogurte"),
+      alt: t("customer-6.alt"),
       name: t("customer-6.name"),
       social: t("customer-6.social"),
       text: t("customer-6.text"),
@@ -57,27 +50,44 @@ const Feedback = () => {
   ];
 
   return (
-    <section className="p-4 bg-purple-200 text-center leading-6 md:leading-8 md:text-xl">
-      <h2>{t("title")}</h2>
-      <ul>
-        {customers.map((customer, index) => (
-          <li key={index} className="flex flex-col gap-4 mb-4">
-            <div className="flex flex-col gap-4 mx-auto max-w-6xl">
-              <Image
-                src={customer.avatar}
-                width={100}
-                height={100}
-                alt={customer.alt}
-              />
-              <div>
-                <h3 className="text-xl font-bold">{customer.name}</h3>
-                <p>{customer.social}</p>
-                <p>{customer.text}</p>
-              </div>
-            </div>
-          </li>
-        ))}
-      </ul>
+    <section>
+      <div className="mx-auto max-w-full lg:max-w-7xl flex flex-col px-4 sm:px-8 lg:px-16 py-8 sm:py-16">
+        <h2 className="heading-2">{t("title")}</h2>
+        <ul className="grid md:grid-cols-2 lg:grid-cols-3 gap-4 lg:gap-8 items-stretch">
+          {customers.map((customer, index) => (
+            <li key={index}>
+              <Card key={index} className="flex flex-col h-full">
+                <CardContent className="flex flex-col gap-4">
+                  <div className="flex gap-2">
+                    <div className="flex items-center flex-grow gap-2 text-left">
+                      <Avatar
+                        src={customer.avatar}
+                        alt={customer.alt}
+                        sx={{
+                          width: 56,
+                          height: 56,
+                        }}
+                      />
+                      <div className="flex flex-col flex-1">
+                        <p className="font-bold">{customer.name}</p>
+                        <p className="text-sm">{customer.social}</p>
+                      </div>
+                    </div>
+                    <Rating
+                      name="ead-only"
+                      defaultValue={5}
+                      size="small"
+                      readOnly
+                    />
+                  </div>
+                  <Divider />
+                  <p>{customer.text}</p>
+                </CardContent>
+              </Card>
+            </li>
+          ))}
+        </ul>
+      </div>
     </section>
   );
 };
