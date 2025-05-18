@@ -41,7 +41,6 @@ export default async function RootLayout({
         <NextIntlClientProvider>
           <AppRouterCacheProvider>
             <ThemeProvider theme={theme}>
-              {/* <div className="mx-auto max-w-6xl flex flex-col min-h-screen px-4"> */}
               <div className="flex flex-col min-h-screen">
                 <main className="flex-grow">{children}</main>
               </div>
