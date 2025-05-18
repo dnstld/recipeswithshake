@@ -3,6 +3,9 @@
     "title": "Sweet life - Gisele Stein",
     "description": "Descubre 10 deliciosas recetas dulces ricas en proteína para diversificar tus desayunos, meriendas o comidas post-entrenamiento — apoyando tus objetivos de pérdida de peso o ganancia de masa muscular"
   },
+  "not-found": {
+    "message": "¡Ups! La página que buscas no existe."
+  },
   "locale": {
     "pt": "Português",
     "en": "English",

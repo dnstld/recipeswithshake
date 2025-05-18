@@ -3,6 +3,9 @@
     "title": "Sweet life - Gisele Stein",
     "description": "Discover 10 delicious protein-rich sweet recipes to diversify your breakfasts, snacks or post-workout meals — supporting your weight loss or muscle-building goals"
   },
+  "not-found": {
+    "message": "Oops! The page you are looking for does not exist."
+  },
   "locale": {
     "pt": "Português",
     "en": "English",
