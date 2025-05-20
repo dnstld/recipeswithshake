@@ -86,12 +86,7 @@ const Gallery = () => {
               },
             ].map((image, index) => (
               <SwiperSlide key={index}>
-                <Chip
-                  label={image.alt}
-                  className="absolute top-4 right-4"
-                  color="primary"
-                  size="medium"
-                />
+                <Chip label={image.alt} className="absolute top-4 right-4" />
                 <Image
                   src={image.src}
                   width={800}
