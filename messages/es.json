@@ -42,12 +42,19 @@
       "title": "Recetas calientes",
       "description": "Panqueque, Brownie, Torta en Taza, Avena con Leche y Chocolate Caliente."
     },
+    "recipies": {
+      "smoothie": "Smoothie de frutas",
+      "yogurte": "Iogurte de frutas",
+      "overnight": "Overnight oats",
+      "geladinho": "Geladinho",
+      "bombom": "Bombom na taça",
+      "panqueca": "Panqueca",
+      "brownie": "Brownie",
+      "bolo": "Bolo de caneca",
+      "mingau": "Mingau de aveia",
+      "chocolate": "Chocolate quente"
+    },
     "swiper-title": "Mira las fotos de las recetas",
-    "geladinho": "Postre helado tipo paleta",
-    "overnight": "Desayuno overnight oats",
-    "smoothie": "Batido de frutas",
-    "uva": "Uvas frescas",
-    "yogurte": "Yogur con complementos",
     "cta": "Quiero el e-book"
   },
   "feedback": {

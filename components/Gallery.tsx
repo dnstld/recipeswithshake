@@ -5,6 +5,7 @@ import { Navigation, Pagination, EffectCoverflow } from "swiper/modules";
 import Image from "next/image";
 import { useState, useEffect } from "react";
 import { useTranslations } from "next-intl";
+import Chip from "@mui/material/Chip";
 
 import "swiper/css";
 import "swiper/css/navigation";
@@ -43,13 +44,54 @@ const Gallery = () => {
             loop={true}
           >
             {[
-              { src: "/images/geladinho.jpg", alt: t("geladinho") },
-              { src: "/images/overnight.jpg", alt: t("overnight") },
-              { src: "/images/smoothie.jpeg", alt: t("smoothie") },
-              { src: "/images/uva.jpg", alt: t("uva") },
-              { src: "/images/yogurte.jpg", alt: t("yogurte") },
+              {
+                src: "/images/recipes/smoothie-de-frutas.jpg",
+                alt: t("recipies.smoothie"),
+              },
+              {
+                src: "/images/recipes/iogurte-de-frutas.jpg",
+                alt: t("recipies.yogurte"),
+              },
+              {
+                src: "/images/recipes/overnight-oats.jpg",
+                alt: t("recipies.overnight"),
+              },
+              {
+                src: "/images/recipes/geladinho.jpg",
+                alt: t("recipies.geladinho"),
+              },
+              {
+                src: "/images/recipes/bombom-na-taca.jpg",
+                alt: t("recipies.bombom"),
+              },
+              {
+                src: "/images/recipes/panqueca.jpg",
+                alt: t("recipies.panqueca"),
+              },
+              {
+                src: "/images/recipes/brownie.jpg",
+                alt: t("recipies.brownie"),
+              },
+              {
+                src: "/images/recipes/bolo-de-caneca.jpg",
+                alt: t("recipies.bolo"),
+              },
+              {
+                src: "/images/recipes/mingau-de-aveia.jpg",
+                alt: t("recipies.mingau"),
+              },
+              {
+                src: "/images/recipes/chocolate-quente.jpg",
+                alt: t("recipies.chocolate"),
+              },
             ].map((image, index) => (
               <SwiperSlide key={index}>
+                <Chip
+                  label={image.alt}
+                  className="absolute top-4 right-4"
+                  color="primary"
+                  size="medium"
+                />
                 <Image
                   src={image.src}
                   width={800}

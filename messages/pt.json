@@ -42,12 +42,19 @@
       "title": "Receitas quentes",
       "description": "Panqueca, Brownie, Bolo de Caneca, Mingau de Aveia e Chocolate Quente."
     },
+    "recipies": {
+      "smoothie": "Smoothie de frutas",
+      "yogurte": "Iogurte de frutas",
+      "overnight": "Overnight oats",
+      "geladinho": "Geladinho",
+      "bombom": "Bombom na taça",
+      "panqueca": "Panqueca",
+      "brownie": "Brownie",
+      "bolo": "Bolo de caneca",
+      "mingau": "Mingau de aveia",
+      "chocolate": "Chocolate quente"
+    },
     "swiper-title": "Confira as fotos das receitas",
-    "geladinho": "Sobremesa geladinha tipo picolé",
-    "overnight": "Café da manhã overnight oats",
-    "smoothie": "Smoothie de frutas",
-    "uva": "Uvas frescas",
-    "yogurte": "Iogurte com complementos",
     "cta": "Quero o e-book"
   },
   "feedback": {

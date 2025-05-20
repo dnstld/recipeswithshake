@@ -42,12 +42,19 @@
       "title": "Hot recipes",
       "description": "Pancake, Brownie, Mug Cake, Oatmeal Porridge, and Hot Chocolate."
     },
+    "recipies": {
+      "smoothie": "Fruit smoothie",
+      "yogurte": "Fruit yogurt",
+      "overnight": "Overnight oats",
+      "geladinho": "Frozen treat",
+      "bombom": "Chocolate cup delight",
+      "panqueca": "Pancake",
+      "brownie": "Brownie",
+      "bolo": "Mug cake",
+      "mingau": "Oatmeal porridge",
+      "chocolate": "Hot chocolate"
+    },
     "swiper-title": "Check out the photos of the recipes",
-    "geladinho": "Frozen popsicle dessert",
-    "overnight": "Overnight oats breakfast",
-    "smoothie": "Fruit smoothie",
-    "uva": "Fresh grapes",
-    "yogurte": "Yogurt with toppings",
     "cta": "I want the e-book"
   },
   "feedback": {
