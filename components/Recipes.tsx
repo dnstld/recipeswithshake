@@ -1,9 +1,11 @@
 "use client";
 
 import { useTranslations } from "next-intl";
-import { Chip, Card, CardContent } from "@mui/material";
+import { Box, Container, Tooltip, IconButton } from "@mui/material";
 import KitchenIcon from "@mui/icons-material/Kitchen";
 import BentoIcon from "@mui/icons-material/Bento";
+import InfoOutlineIcon from "@mui/icons-material/InfoOutline";
+import { red, blue } from "@mui/material/colors";
 
 import "swiper/css";
 import "swiper/css/navigation";
@@ -11,46 +13,51 @@ import "swiper/css/pagination";
 import "swiper/css/effect-coverflow";
 
 const Recipes = () => {
-  const t = useTranslations("gallery");
+  const t = useTranslations("recipes");
 
   return (
-    <section>
-      <div className="mx-auto max-w-full lg:max-w-7xl px-4 sm:px-8 lg:px-16 py-8 sm:py-16 space-y-8">
-        <div>
-          <h2 className="heading-2">{t("title")}</h2>
-          <p>{t("description")}</p>
+    <Box component="section">
+      <Container
+        maxWidth="lg"
+        className="my-8 lg:my-16 flex flex-col gap-8 lg:gap-16"
+      >
+        <h2 className="text-4xl font-bold tracking-tight lg:leading-16 sm:text-5xl md:text-6xl text-center max-w-2xl mx-auto">
+          <span>
+            {t.rich("title", {
+              highlight: (chunks) => (
+                <span className="font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-yellow-500 to-pink-500">
+                  {chunks}
+                </span>
+              ),
+            })}
+          </span>
+          <Tooltip
+            title={t("tooltip")}
+            sx={{ marginLeft: 1, position: "absolute" }}
+          >
+            <IconButton>
+              <InfoOutlineIcon />
+            </IconButton>
+          </Tooltip>
+        </h2>
+        <div className="grid grid-cols-2 gap-8 lg:gap-8 max-w-lg mx-auto">
+          <div className="flex flex-col items-end gap-2 text-right">
+            <KitchenIcon fontSize="large" sx={{ color: blue[500] }} />
+            <p className="text-xl font-bold tracking-tight">
+              {t("cold-recipes.title")}
+            </p>
+            <p>{t("cold-recipes.description")}</p>
+          </div>
+          <div className="flex flex-col gap-2">
+            <BentoIcon fontSize="large" sx={{ color: red[500] }} />
+            <p className="text-xl font-bold tracking-tight">
+              {t("hot-recipes.title")}
+            </p>
+            <p>{t("hot-recipes.description")}</p>
+          </div>
         </div>
-
-        <div className="grid sm:grid-cols-2 gap-4 lg:gap-8">
-          <Card variant="outlined">
-            <CardContent>
-              <Chip
-                label={t("cold-recipes.title")}
-                icon={<KitchenIcon fontSize="small" />}
-                sx={{
-                  bgcolor: "#f0f9ff",
-                }}
-                className="mb-2"
-              />
-              <p>{t("cold-recipes.description")}</p>
-            </CardContent>
-          </Card>
-          <Card variant="outlined">
-            <CardContent>
-              <Chip
-                label={t("hot-recipes.title")}
-                icon={<BentoIcon fontSize="small" />}
-                sx={{
-                  bgcolor: "#fef2f2",
-                }}
-                className="mb-2"
-              />
-              <p>{t("hot-recipes.description")}</p>
-            </CardContent>
-          </Card>
-        </div>
-      </div>
-    </section>
+      </Container>
+    </Box>
   );
 };
 

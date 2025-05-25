@@ -1,7 +1,7 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
+  --background: #fffbeb; /* amber-50 */
   --foreground: #171717;
   --swiper-navigation-color: white;
   --swiper-pagination-color: white;
@@ -17,21 +17,9 @@
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #ffffff;
+    --background: #fffbeb;
     --foreground: #171717;
   }
-}
-
-.heading-1 {
-  @apply text-5xl font-semibold tracking-tight sm:text-7xl text-balance mb-4;
-}
-
-.heading-2 {
-  @apply text-2xl font-medium tracking-tight sm:text-3xl mb-4;
-}
-
-.heading-3 {
-  @apply text-xl font-medium tracking-tight sm:text-2xl mb-4;
 }
 
 body {

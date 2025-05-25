@@ -5,7 +5,7 @@ import { Navigation, Pagination, EffectCoverflow } from "swiper/modules";
 import Image from "next/image";
 import { useState, useEffect } from "react";
 import { useTranslations } from "next-intl";
-import Chip from "@mui/material/Chip";
+import { Box, Container } from "@mui/material";
 
 import "swiper/css";
 import "swiper/css/navigation";
@@ -21,9 +21,8 @@ const Gallery = () => {
   }, []);
 
   return (
-    <section>
-      <div className="mx-auto max-w-full lg:max-w-7xl lg:px-16 py-8 sm:py-16 space-y-8">
-        <h3 className="heading-2">{t("swiper-title")}</h3>
+    <Box component="section">
+      <Container maxWidth="lg" className="my-8 lg:my-16">
         {!mounted ? (
           <div className="w-full bg-gray-300 animate-pulse rounded-lg h-36 sm:h-80 md:h-96"></div>
         ) : (
@@ -46,47 +45,46 @@ const Gallery = () => {
             {[
               {
                 src: "/images/recipes/smoothie-de-frutas.jpg",
-                alt: t("recipies.smoothie"),
+                alt: t("smoothie"),
               },
               {
                 src: "/images/recipes/iogurte-de-frutas.jpg",
-                alt: t("recipies.yogurte"),
+                alt: t("yogurte"),
               },
               {
                 src: "/images/recipes/overnight-oats.jpg",
-                alt: t("recipies.overnight"),
+                alt: t("overnight"),
               },
               {
                 src: "/images/recipes/geladinho.jpg",
-                alt: t("recipies.geladinho"),
+                alt: t("geladinho"),
               },
               {
                 src: "/images/recipes/bombom-na-taca.jpg",
-                alt: t("recipies.bombom"),
+                alt: t("bombom"),
               },
               {
                 src: "/images/recipes/panqueca.jpg",
-                alt: t("recipies.panqueca"),
+                alt: t("panqueca"),
               },
               {
                 src: "/images/recipes/brownie.jpg",
-                alt: t("recipies.brownie"),
+                alt: t("brownie"),
               },
               {
                 src: "/images/recipes/bolo-de-caneca.jpg",
-                alt: t("recipies.bolo"),
+                alt: t("bolo"),
               },
               {
                 src: "/images/recipes/mingau-de-aveia.jpg",
-                alt: t("recipies.mingau"),
+                alt: t("mingau"),
               },
               {
                 src: "/images/recipes/chocolate-quente.jpg",
-                alt: t("recipies.chocolate"),
+                alt: t("chocolate"),
               },
             ].map((image, index) => (
               <SwiperSlide key={index}>
-                <Chip label={image.alt} className="absolute top-4 right-4" />
                 <Image
                   src={image.src}
                   width={800}
@@ -99,8 +97,8 @@ const Gallery = () => {
             ))}
           </Swiper>
         )}
-      </div>
-    </section>
+      </Container>
+    </Box>
   );
 };
 

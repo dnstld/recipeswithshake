@@ -1,5 +1,13 @@
 import { useTranslations } from "next-intl";
-import { Avatar, Card, CardContent, Divider, Rating } from "@mui/material";
+import {
+  Avatar,
+  Card,
+  CardContent,
+  Divider,
+  Rating,
+  Container,
+  Box,
+} from "@mui/material";
 
 const Feedback = () => {
   const t = useTranslations("feedback");
@@ -50,9 +58,11 @@ const Feedback = () => {
   ];
 
   return (
-    <section>
-      <div className="mx-auto max-w-full lg:max-w-7xl flex flex-col px-4 sm:px-8 lg:px-16 py-8 sm:py-16">
-        <h2 className="heading-2">{t("title")}</h2>
+    <Box component="section">
+      <Container maxWidth="lg" className="my-8 lg:my-16">
+        <h2 className="text-4xl font-bold tracking-tight lg:leading-16 sm:text-5xl md:text-6xl text-center max-w-2xl mx-auto mb-8">
+          {t("title")}
+        </h2>
         <ul className="grid md:grid-cols-2 lg:grid-cols-3 gap-4 lg:gap-8 items-stretch">
           {customers.map((customer, index) => (
             <li key={index}>
@@ -87,8 +97,8 @@ const Feedback = () => {
             </li>
           ))}
         </ul>
-      </div>
-    </section>
+      </Container>
+    </Box>
   );
 };
 

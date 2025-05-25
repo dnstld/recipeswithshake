@@ -10,9 +10,9 @@ export const themeOptions: ThemeOptions = {
       dark: "#3d6300",
     },
     secondary: {
-      main: "#8a0735",
-      light: "#ec003f",
-      dark: "#4d0218",
+      main: "#e17100", // amber-600
+      light: "#fffbeb", // amber-50
+      dark: "#461901", // amber-950
     },
   },
   components: {

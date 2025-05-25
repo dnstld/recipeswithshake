@@ -6,11 +6,9 @@ import Gallery from "@/components/Gallery";
 import Recipes from "@/components/Recipes";
 import Hero from "@/components/Hero";
 import Cta from "@/components/Cta";
-import Timer from "@/components/Timer";
-import LocaleBar from "@/components/LocaleBar";
+import Header from "@/components/Header";
 import { AbstractIntlMessages } from "next-intl";
 import { getMessages } from "next-intl/server";
-import Parallax from "@/components/Parallax";
 import Footer from "@/components/Footer";
 
 export const dynamic = "force-dynamic";
@@ -30,14 +28,10 @@ export async function generateMetadata() {
 
 export default function Home() {
   return (
-    <main className="w-full md:text-lg bg-rose-200 text-center">
-      <LocaleBar />
-      <Timer />
+    <main className="w-full">
+      <Header />
       <Hero />
-      <Parallax
-        backgroundImage="/images/smoothie-bg.jpeg"
-        className="hidden md:block"
-      />
+      <Cta />
       <Benefits />
       <Recipes />
       <Gallery />

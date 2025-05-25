@@ -1,27 +1,44 @@
 "use client";
 
 import { useTranslations } from "next-intl";
-import Chip from "@mui/material/Chip";
-import Cta from "@/components/Cta";
+import { Box, Container } from "@mui/material";
 
 const Hero = () => {
   const t = useTranslations("hero");
 
   return (
-    <section>
-      <div className="mx-auto max-w-full lg:max-w-4xl grid px-4 sm:px-8 lg:px-16 py-8 sm:py-16">
-        <div className="">
-          <h1 className="heading-1 inline-flex">
-            {t("title")}
-            <Chip label="E-book" />
-          </h1>
-          <h2 className="heading-2">{t("subtitle")}</h2>
-          <p className="mb-16">{t("description")}</p>
-
-          <Cta />
+    <Box component="section">
+      <Container
+        maxWidth="lg"
+        className="grid lg:grid-cols-2 gap-8 lg:items-center my-8 lg:my-16"
+      >
+        <div>
+          <h2>
+            {t.rich("title", {
+              strong: (chunks) => <strong>{chunks}</strong>,
+            })}
+          </h2>
+          <h3 className="text-4xl font-bold tracking-tight sm:text-5xl md:text-6xl grid my-2">
+            {t.rich("subtitle", {
+              span: (chuncks) => <span>{chuncks}</span>,
+              highlight: (chunks) => (
+                <span className="font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-yellow-500 to-pink-500">
+                  {chunks}
+                </span>
+              ),
+            })}
+          </h3>
+          <p>{t("description")}</p>
         </div>
-      </div>
-    </section>
+        <div className="aspect-video flex justify-center relative w-full max-w-xs sm:max-w-sm md:max-w-md lg:max-w-sm xl:max-w-md mx-auto">
+          <iframe
+            className="absolute inset-0 w-full h-full bg-white shadow-lg"
+            src="https://www.youtube.com/embed/19g66ezsKAg"
+            allowFullScreen
+          />
+        </div>
+      </Container>
+    </Box>
   );
 };
 

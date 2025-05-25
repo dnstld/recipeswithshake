@@ -6,13 +6,14 @@ import GroupIcon from "@mui/icons-material/Group";
 import PermDeviceInformationIcon from "@mui/icons-material/PermDeviceInformation";
 import CakeIcon from "@mui/icons-material/Cake";
 import WomanIcon from "@mui/icons-material/Woman";
+import { Box, Container } from "@mui/material";
 
 const About = () => {
   const t = useTranslations("about");
 
   return (
-    <section className="bg-rose-800 text-white">
-      <div className="mx-auto max-w-full lg:max-w-7xl flex flex-col px-4 sm:px-8 lg:px-16 py-8 sm:py-16">
+    <Box component="section">
+      <Container maxWidth="lg" className="my-8 lg:my-16">
         <div className="grid md:grid-cols-2 gap-4 lg:gap-8">
           <div className="relative aspect-3/2 rounded-r-2xl rounded-tl-2xl md:rounded-bl-2xl md:rounded-br-none overflow-hidden">
             <Image
@@ -22,45 +23,54 @@ const About = () => {
               alt={t("alt")}
             />
           </div>
-          <div className="flex flex-col gap-2 text-left">
-            <h2 className="heading-2">{t("title")}</h2>
+          <div className="text-left">
+            <h2 className="text-4xl font-bold tracking-tight lg:leading-16 sm:text-5xl md:text-6xl mb-4">
+              {t("title")}
+            </h2>
             <p className="text-xl font-bold mb-4">{t("me")}</p>
             {[
               {
                 text: t("family"),
-                icon: <Diversity1Icon />,
+                icon: <Diversity1Icon color="secondary" aria-hidden={true} />,
               },
 
               {
                 text: t("entrepreneur"),
-                icon: <MonitorWeightIcon />,
+                icon: (
+                  <MonitorWeightIcon color="secondary" aria-hidden={true} />
+                ),
               },
               {
                 text: t("years"),
-                icon: <GroupIcon />,
+                icon: <GroupIcon color="secondary" aria-hidden={true} />,
               },
               {
                 text: t("creator"),
-                icon: <PermDeviceInformationIcon />,
+                icon: (
+                  <PermDeviceInformationIcon
+                    color="secondary"
+                    aria-hidden={true}
+                  />
+                ),
               },
               {
                 text: t("sweet"),
-                icon: <CakeIcon />,
+                icon: <CakeIcon color="secondary" aria-hidden={true} />,
               },
               {
                 text: t("shielded"),
-                icon: <WomanIcon />,
+                icon: <WomanIcon color="secondary" aria-hidden={true} />,
               },
             ].map((item, index) => (
-              <span key={index} className="flex gap-2 lg:gap-4">
+              <span key={index} className="flex gap-2 lg:gap-4 leading-8">
                 {item.icon}
                 <p>{item.text}</p>
               </span>
             ))}
           </div>
         </div>
-      </div>
-    </section>
+      </Container>
+    </Box>
   );
 };
 

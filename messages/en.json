@@ -6,34 +6,35 @@
   "not-found": {
     "message": "Oops! The page you are looking for does not exist."
   },
-  "locale": {
-    "pt": "Português",
-    "en": "English",
-    "es": "Español"
+  "header": {
+    "title": "Recipes with Shake",
+    "locale": {
+      "pt": "Português",
+      "en": "English",
+      "es": "Español"
+    }
   },
-  "timer": {
-    "title": "Don't Miss Out - Secure Your Special Price Now!",
-    "hours": "hours",
-    "minutes": "minutes",
-    "seconds": "seconds"
+  "cta": {
+    "label": "Get the E-book",
+    "payment": "Payment <br></br>100% Safe",
+    "privacy": "Privacy <br></br>Protected",
+    "verified": "Verified <br></br>and Protected"
   },
   "hero": {
-    "title": "Sweet Life",
-    "subtitle": "Indulge in Healthy Protein-Packed Treats",
-    "description": "Discover 10 delicious protein-rich sweet recipes to diversify your breakfasts, snacks or post-workout meals — supporting your weight loss or muscle-building goals",
-    "cta": "I want the e-book"
+    "title": "<strong>E-book:</strong> Sweet Life",
+    "subtitle": "<span>Indulge in Healthy </span><highlight>Protein-Packed </highlight><span>Treats</span>",
+    "description": "Discover 10 delicious protein-rich sweet recipes to diversify your breakfasts, snacks or post-workout meals — supporting your weight loss or muscle-building goals"
   },
   "benefits": {
-    "title": "What are the benefits of consuming these sweets?",
-    "benefit-1": "Enjoy healthier, sweet moments with your family",
-    "benefit-2": "Control the desire for sweets",
-    "benefit-3": "Lose weight or gain lean mass",
-    "benefit-4": "To prevent diseases such as Obesity, Diabetes, and Sarcopenia",
-    "benefit-5": "Vary the sources of protein in your day"
+    "benefit-1": "Enjoy healthier, sweeter moments with your family",
+    "benefit-2": "Manage your cravings for sweets",
+    "benefit-3": "Lose weight or build lean muscle",
+    "benefit-4": "Prevent diseases like obesity, diabetes, and sarcopenia",
+    "benefit-5": "Diversify your protein sources throughout the day"
   },
-  "gallery": {
-    "title": "What are the recipes in the E-book?",
-    "description": "With the Sweet Life E-book, you will learn 10 protein-rich sweet recipes, consisting of 5 cold and 5 hot recipes.",
+  "recipes": {
+    "title": "Get 10 high-protein sweet recipes with 5 hot and 5 cold options for roughly <highlight>$5</highlight>",
+    "tooltip": "Price varies slightly with the exchange rate — around $5",
     "cold-recipes": {
       "title": "Cold recipes",
       "description": "Fruit Smoothie, Fruit Yogurt, Overnight Oats, Frozen treat, and Chocolate Cup Delight."
@@ -41,21 +42,19 @@
     "hot-recipes": {
       "title": "Hot recipes",
       "description": "Pancake, Brownie, Mug Cake, Oatmeal Porridge, and Hot Chocolate."
-    },
-    "recipies": {
-      "smoothie": "Fruit smoothie",
-      "yogurte": "Fruit yogurt",
-      "overnight": "Overnight oats",
-      "geladinho": "Frozen treat",
-      "bombom": "Chocolate cup delight",
-      "panqueca": "Pancake",
-      "brownie": "Brownie",
-      "bolo": "Mug cake",
-      "mingau": "Oatmeal porridge",
-      "chocolate": "Hot chocolate"
-    },
-    "swiper-title": "Check out the photos of the recipes",
-    "cta": "I want the e-book"
+    }
+  },
+  "gallery": {
+    "smoothie": "Fruit smoothie",
+    "yogurte": "Fruit yogurt",
+    "overnight": "Overnight oats",
+    "geladinho": "Frozen treat",
+    "bombom": "Chocolate cup delight",
+    "panqueca": "Pancake",
+    "brownie": "Brownie",
+    "bolo": "Mug cake",
+    "mingau": "Oatmeal porridge",
+    "chocolate": "Hot chocolate"
   },
   "feedback": {
     "title": "Customer feedback",

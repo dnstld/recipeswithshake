@@ -4,14 +4,20 @@ import { useState } from "react";
 import { useTranslations } from "next-intl";
 import Fab from "@mui/material/Fab";
 import BookmarkAdd from "@mui/icons-material/BookmarkAdd";
-import Modal from "@mui/material/Modal";
-import Box from "@mui/material/Box";
-import IconButton from "@mui/material/IconButton";
 import CloseIcon from "@mui/icons-material/Close";
-import CircularProgress from "@mui/material/CircularProgress";
+import GppGoodIcon from "@mui/icons-material/GppGood";
+import FingerprintIcon from "@mui/icons-material/Fingerprint";
+import ScreenLockPortraitIcon from "@mui/icons-material/ScreenLockPortrait";
+import {
+  Box,
+  Container,
+  Modal,
+  IconButton,
+  CircularProgress,
+} from "@mui/material";
 
 const Cta = () => {
-  const t = useTranslations("hero");
+  const t = useTranslations("cta");
   const [open, setOpen] = useState(false);
   const [loading, setLoading] = useState(true);
 
@@ -21,17 +27,46 @@ const Cta = () => {
 
   return (
     <>
-      <section className="flex justify-center">
-        <Fab
-          className="block mx-auto"
-          color="primary"
-          variant="extended"
-          onClick={handleOpen}
-        >
-          <BookmarkAdd sx={{ mr: 1 }} />
-          {t("cta")}
-        </Fab>
-      </section>
+      <Box component="section">
+        <Container className="flex flex-col justify-center items-center gap-8">
+          <Fab
+            className="block mx-auto"
+            color="primary"
+            variant="extended"
+            onClick={handleOpen}
+          >
+            <BookmarkAdd sx={{ mr: 1 }} />
+            {t("label")}
+          </Fab>
+
+          <div className="flex gap-10 text-xs">
+            <div className="flex flex-col sm:flex-row gap-2">
+              <GppGoodIcon />
+              <p>
+                {t.rich("payment", {
+                  br: () => <br />,
+                })}
+              </p>
+            </div>
+            <div className="flex flex-col sm:flex-row gap-2">
+              <FingerprintIcon />
+              <p>
+                {t.rich("privacy", {
+                  br: () => <br />,
+                })}
+              </p>
+            </div>
+            <div className="flex flex-col sm:flex-row gap-2">
+              <ScreenLockPortraitIcon />
+              <p>
+                {t.rich("verified", {
+                  br: () => <br />,
+                })}
+              </p>
+            </div>
+          </div>
+        </Container>
+      </Box>
 
       <Modal
         open={open}

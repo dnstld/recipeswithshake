@@ -6,22 +6,19 @@
   "not-found": {
     "message": "Oops! A página que você está procurando não existe."
   },
-  "locale": {
-    "pt": "Português",
-    "en": "English",
-    "es": "Español"
-  },
-  "timer": {
-    "title": "Não Perca Esta Oportunidade - Garanta Seu Preço Especial Agora!",
-    "hours": "horas",
-    "minutes": "minutos",
-    "seconds": "segundos"
+  "header": {
+    "title": "Receitas com Shake",
+    "locale": {
+      "pt": "Português",
+      "en": "English",
+      "es": "Español"
+    }
   },
   "hero": {
-    "title": "Sweet Life",
-    "subtitle": "Delicie-se com Petiscos Saudáveis Ricos em Proteína",
-    "description": "Descubra 10 deliciosas receitas doces ricas em proteína para diversificar seus cafés da manhã, lanches ou refeições pós-treino — apoiando seus objetivos de perda de peso ou ganho de massa muscular",
-    "cta": "Quero o e-book"
+    "title": "<strong>E-book:</strong> Sweet Life",
+    "subtitle": "<span>Indulge in Healthy </span><highlight>Protein-Packed </highlight><span>Treats</span>",
+    "description": "Discover 10 delicious protein-rich sweet recipes to diversify your breakfasts, snacks or post-workout meals — supporting your weight loss or muscle-building goals",
+    "cta": "I want the e-book"
   },
   "benefits": {
     "title": "Quais são os benefícios de consumir esses doces?",

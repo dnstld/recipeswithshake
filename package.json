@@ -8,6 +8,7 @@
     "start": "next start",
     "static": "next build",
     "lint": "next lint",
+    "reset": "rm -rf node_modules .next yarn.lock && yarn",
     "next-intl:validate": "node -e \"require('./next-intl.config.cjs')\""
   },
   "dependencies": {

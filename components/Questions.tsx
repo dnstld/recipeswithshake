@@ -13,6 +13,7 @@ import Typography from "@mui/material/Typography";
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
 import Fade from "@mui/material/Fade";
 import { useState } from "react";
+import { Box, Container } from "@mui/material";
 
 const Questions = () => {
   const t = useTranslations("questions");
@@ -24,9 +25,14 @@ const Questions = () => {
   };
 
   return (
-    <section>
-      <div className="mx-auto max-w-full lg:max-w-7xl flex flex-col px-4 sm:px-8 lg:px-16 py-8 sm:py-16">
-        <h2 className="heading-2">{t("title")}</h2>
+    <Box component="section">
+      <Container
+        maxWidth="lg"
+        className="my-8 lg:my-16 flex flex-col gap-8 lg:gap-16"
+      >
+        <h2 className="text-4xl font-bold tracking-tight lg:leading-16 sm:text-5xl md:text-6xl">
+          {t("title")}
+        </h2>
         <div className="text-left">
           <Accordion
             expanded={expanded}
@@ -123,8 +129,8 @@ const Questions = () => {
             </AccordionDetails>
           </Accordion>
         </div>
-      </div>
-    </section>
+      </Container>
+    </Box>
   );
 };
 
