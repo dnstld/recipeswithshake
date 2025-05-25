@@ -1,7 +1,7 @@
 {
   "meta": {
-    "title": "Sweet life - Gisele Stein",
-    "description": "Descubre 10 deliciosas recetas dulces ricas en proteína para diversificar tus desayunos, meriendas o comidas post-entrenamiento — apoyando tus objetivos de pérdida de peso o ganancia de masa muscular"
+    "title": "Vida dulce - Gisele Stein",
+    "description": "Descubre 10 deliciosas recetas dulces ricas en proteínas para diversificar tus desayunos, meriendas o comidas post-entrenamiento — apoyando tus objetivos de pérdida de peso o ganancia muscular"
   },
   "not-found": {
     "message": "¡Ups! La página que buscas no existe."
@@ -14,94 +14,96 @@
       "es": "Español"
     }
   },
+  "cta": {
+    "label": "Consigue el E-book",
+    "payment": "Pago <br></br>100% Seguro",
+    "privacy": "Privacidad <br></br>Protegida",
+    "verified": "Verificado <br></br>y Protegido"
+  },
   "hero": {
-    "title": "<strong>E-book:</strong> Sweet Life",
-    "subtitle": "<span>Indulge in Healthy </span><highlight>Protein-Packed </highlight><span>Treats</span>",
-    "description": "Discover 10 delicious protein-rich sweet recipes to diversify your breakfasts, snacks or post-workout meals — supporting your weight loss or muscle-building goals",
-    "cta": "I want the e-book"
+    "title": "<strong>E-book:</strong> Vida Dulce",
+    "subtitle": "<span>Disfruta de </span><highlight>Dulces Saludables </highlight><span>y Proteicos</span>",
+    "description": "Descubre 10 deliciosas recetas dulces ricas en proteínas para diversificar tus desayunos, meriendas o comidas post-entrenamiento — apoyando tus objetivos de pérdida de peso o ganancia muscular"
   },
   "benefits": {
-    "title": "¿Cuáles son los beneficios de consumir estos dulces?",
-    "benefit-1": "Disfruta de momentos dulces más saludables con tu familia",
-    "benefit-2": "Controla el deseo de dulces",
-    "benefit-3": "Pierde peso o gana masa magra",
-    "benefit-4": "Previene enfermedades como Obesidad, Diabetes y Sarcopenia",
-    "benefit-5": "Varía las fuentes de proteína en tu día"
+    "benefit-1": "Disfruta de momentos más dulces y saludables con tu familia",
+    "benefit-2": "Controla tus antojos de dulces",
+    "benefit-3": "Baja de peso o gana masa muscular magra",
+    "benefit-4": "Previene enfermedades como obesidad, diabetes y sarcopenia",
+    "benefit-5": "Diversifica tus fuentes de proteína a lo largo del día"
   },
-  "gallery": {
-    "title": "¿Cuáles son las recetas del E-book?",
-    "description": "Con el E-book Sweet Life, aprenderás 10 recetas dulces ricas en proteína, compuestas por 5 recetas frías y 5 calientes.",
+  "recipes": {
+    "title": "Obtén 10 recetas dulces ricas en proteínas con 5 opciones calientes y 5 frías por aproximadamente <highlight>$5</highlight>",
+    "tooltip": "El precio varía ligeramente con el tipo de cambio — alrededor de $5",
     "cold-recipes": {
       "title": "Recetas frías",
-      "description": "Batido de Frutas, Yogur con Frutas, Overnight Oats, Helado casero y Vasito de Chocolate."
+      "description": "Batido de frutas, Yogur de frutas, Avena nocturna, Postre helado y Delicia en taza de chocolate."
     },
     "hot-recipes": {
       "title": "Recetas calientes",
-      "description": "Panqueque, Brownie, Torta en Taza, Avena con Leche y Chocolate Caliente."
-    },
-    "recipies": {
-      "smoothie": "Smoothie de frutas",
-      "yogurte": "Iogurte de frutas",
-      "overnight": "Overnight oats",
-      "geladinho": "Geladinho",
-      "bombom": "Bombom na taça",
-      "panqueca": "Panqueca",
-      "brownie": "Brownie",
-      "bolo": "Bolo de caneca",
-      "mingau": "Mingau de aveia",
-      "chocolate": "Chocolate quente"
-    },
-    "swiper-title": "Mira las fotos de las recetas",
-    "cta": "Quiero el e-book"
+      "description": "Panqueque, Brownie, Pastel en taza, Gachas de avena y Chocolate caliente."
+    }
+  },
+  "gallery": {
+    "smoothie": "Batido de frutas",
+    "yogurte": "Yogur de frutas",
+    "overnight": "Avena nocturna",
+    "geladinho": "Postre helado",
+    "bombom": "Delicia en taza de chocolate",
+    "panqueca": "Panqueque",
+    "brownie": "Brownie",
+    "bolo": "Pastel en taza",
+    "mingau": "Gachas de avena",
+    "chocolate": "Chocolate caliente"
   },
   "feedback": {
-    "title": "Testimonios de clientes",
+    "title": "Opiniones de clientes",
     "customer-1": {
       "name": "Giulia Vedovato",
       "alt": "Foto de Giulia Vedovato",
       "social": "@giuliavedovato",
-      "text": "Hola Gi, hice el panqueque y me encantó. realmente quita las ganas de comer algo dulce, sacia mucho y es muy fácil de hacer."
+      "text": "Hola Gi, hice el panqueque y me encantó. Realmente satisface el antojo de algo dulce, llena bastante y es muy fácil de hacer."
     },
     "customer-2": {
       "name": "Felipe Augusto",
       "alt": "Foto de Felipe Augusto",
       "social": "@felipeugusto",
-      "text": "Gi, soy un apasionado de los dulces, especialmente los dulces de maní. Aprendí la receta súper fácil del Helado con mantequilla de maní, ¡y ahora no puedo parar de hacerlo! ¡Lo recomiendo mucho!"
+      "text": "Gi, me encantan los dulces, especialmente los de maní. Aprendí la receta súper fácil del postre helado con mantequilla de maní ¡y no puedo dejar de hacerlo! ¡Lo recomiendo mucho!"
     },
     "customer-3": {
       "name": "Claudia Bassani",
       "alt": "Foto de Claudia Bassani",
       "social": "@claudia_c_a_bassani",
-      "text": "¡Me encantó el batido de fresa–parecía un milkshake! ¡Además de ser súper sabroso, realmente quita el hambre! ¡También fue súper fácil de hacer!"
+      "text": "Me encantó el batido de fresa – ¡parecía un milkshake! Además de ser súper sabroso, ¡realmente quita el hambre! ¡También fue súper fácil de hacer!"
     },
     "customer-4": {
       "name": "Rosângela Araújo",
       "alt": "Foto de Rosângela Araújo",
       "social": "@rosangela_hairstylist",
-      "text": "Me gustan todas las recetas del E-book, pero mi favorita es el pastel con mantequilla de maní; ¡quita mis ganas de dulce y aún es sabroso!"
+      "text": "Me gustan todas las recetas del E-book, pero mi favorita es el pastel con mantequilla de maní; ¡satisface mis antojos de dulce y además es delicioso!"
     },
     "customer-5": {
       "name": "Mariele Aline",
       "alt": "Foto de Mariele Aline",
       "social": "@mariele9323",
-      "text": "¡Dios mío, me encantó el chocolate en la taza! ¡Está delicioso! Chocolate absolutamente divino—¡simplemente el mejor! ¡Esta combinación con uvas es perfección!"
+      "text": "¡Dios mío, me encantó el chocolate en taza! ¡Está delicioso! Chocolate absolutamente divino — ¡simplemente el mejor! ¡Esta combinación con uvas es perfección!"
     },
     "customer-6": {
       "name": "Thais Fernanda",
       "alt": "Foto de Thais Fernanda",
       "social": "@thais.almeida1",
-      "text": "¡Hola Gi! Me encantó el E-book. Tiene recetas muy bien elaboradas que son saciantes y también ayudan a quitar esas ganas de dulce. Me encantó el yogur y el batido con frutitas, pero mi receta favorita es definitivamente la torta de chocolate en taza. Es tan buena…"
+      "text": "¡Hola Gi! Me encantó el E-book. Tiene recetas muy bien elaboradas que llenan y también ayudan a calmar el antojo de dulce. Me encantó el yogur y el batido con frutitas, pero mi receta favorita definitivamente es el pastel de chocolate en taza. Está buenísimo…"
     }
   },
   "about": {
-    "title": "¿Quién soy yo?",
-    "alt": "Gi Toledo en su oficina sosteniendo un delicioso batido",
+    "title": "¿Quién soy?",
+    "alt": "Gi Toledo en su oficina con un delicioso shake",
     "me": "Gisele Toledo, 47 años, brasileña",
-    "family": "Casada, madre de dos",
+    "family": "Casada, madre de dos hijos",
     "entrepreneur": "Emprendedora en el nicho de Bienestar y Pérdida de Peso desde hace 13 años",
     "years": "Más de 10,000 clientes en 13 años",
     "creator": "Creadora de infoproductos desde julio de 2022",
-    "sweet": "Fundadora del Proyecto Sweet Life desde febrero de 2023",
+    "sweet": "Fundadora del Proyecto Vida Dulce desde febrero de 2023",
     "shielded": "Fundadora del Proyecto Mujeres Blindadas desde diciembre de 2024"
   },
   "questions": {
@@ -109,19 +111,19 @@
     "cta": "Quiero el e-book",
     "question-1": {
       "question": "¿Cómo acceder a los e-books después de la compra?",
-      "answer": "E-books a través del email que registraste durante la compra (presta mucha atención a llenar el campo de email correctamente). También puedes acceder a tus productos a través del sitio web o app de Eduzz."
+      "answer": "Los e-books se envían al correo electrónico que registraste durante la compra (presta mucha atención al llenar correctamente el campo de correo electrónico). También puedes acceder a tus productos a través del sitio web o la app de Eduzz."
     },
     "question-2": {
-      "question": "¿Existe alguna garantía?",
-      "answer": "Sí, hay una garantía de 7 días. Si concluyes que los productos digitales comprados no agregaron valor a tus objetivos, puedes solicitar reembolso sin burocracia."
+      "question": "¿Hay alguna garantía?",
+      "answer": "Sí, hay una garantía de 7 días. Si decides que los productos digitales adquiridos no aportaron valor a tus objetivos, puedes solicitar un reembolso sin ninguna burocracia."
     },
     "question-3": {
       "question": "¿Cuáles son los métodos de pago?",
       "answer": "Tarjeta de crédito"
     },
     "question-4": {
-      "question": "¿Las recetas son adecuadas para personas con diabetes, intolerancia a la lactosa o sensibilidad al gluten?",
-      "answer": "Sí, solo compra ingredientes y suplementos sin azúcar, sin lactosa (o veganos) y sin gluten."
+      "question": "¿Son aptas las recetas para personas con diabetes, intolerancia a la lactosa o sensibilidad al gluten?",
+      "answer": "Sí, solo debes adquirir ingredientes y suplementos sin azúcar, sin lactosa (o veganos) y sin gluten."
     },
     "question-5": {
       "question": "¿Cuál es el tiempo de acceso a los E-books?",
@@ -129,6 +131,6 @@
     }
   },
   "footer": {
-    "copyright": "© 2023 - Gisele Toledo - Todos los Derechos Reservados"
+    "copyright": "© 2023 - Gisele Toledo - Todos los derechos reservados"
   }
 }
