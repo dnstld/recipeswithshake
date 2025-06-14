@@ -92,6 +92,7 @@ const Gallery = () => {
                   alt={image.alt}
                   objectFit="cover"
                   className="rounded-lg"
+                  loading="eager"
                 />
               </SwiperSlide>
             ))}
