@@ -58,7 +58,8 @@
     "brownie": "Brownie",
     "bolo": "Mug cake",
     "mingau": "Oatmeal porridge",
-    "chocolate": "Hot chocolate"
+    "chocolate": "Hot chocolate",
+    "loading": "Loading gallery"
   },
   "feedback": {
     "title": "Customer feedback",
