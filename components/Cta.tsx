@@ -1,46 +1,94 @@
 "use client";
 
-import { useState } from "react";
+import { useRef, useState } from "react";
 import { useTranslations } from "next-intl";
 import Fab from "@mui/material/Fab";
 import BookmarkAdd from "@mui/icons-material/BookmarkAdd";
 import CloseIcon from "@mui/icons-material/Close";
 import GppGoodIcon from "@mui/icons-material/GppGood";
+import ErrorOutlineIcon from "@mui/icons-material/ErrorOutline";
 import FingerprintIcon from "@mui/icons-material/Fingerprint";
 import ScreenLockPortraitIcon from "@mui/icons-material/ScreenLockPortrait";
 import {
   Box,
   Container,
-  Modal,
+  Drawer,
   IconButton,
   CircularProgress,
   Divider,
+  Button,
+  Card,
+  CardContent,
+  CardActions,
+  Typography,
 } from "@mui/material";
+
+const ErrorCard = ({ onRetry }: { onRetry: () => void }) => {
+  const t = useTranslations("cta");
+  return (
+    <Card sx={{ maxWidth: 300 }} elevation={0}>
+      <Box sx={{ display: "flex", justifyContent: "center" }}>
+        <ErrorOutlineIcon fontSize="large" />
+      </Box>
+      <CardContent>
+        <Typography align="center">{t("errorMessage")}</Typography>
+      </CardContent>
+      <CardActions sx={{ justifyContent: "center" }}>
+        <Button variant="contained" onClick={onRetry}>
+          {t("retry")}
+        </Button>
+      </CardActions>
+    </Card>
+  );
+};
 
 const Cta = () => {
   const t = useTranslations("cta");
   const [open, setOpen] = useState(false);
   const [loading, setLoading] = useState(true);
+  const [iframeError, setIframeError] = useState(false);
+  const iframeRef = useRef<HTMLIFrameElement>(null);
 
-  const handleOpen = () => setOpen(true);
+  const handleOpen = () => {
+    setLoading(true);
+    setIframeError(false);
+    setOpen(true);
+  };
+
   const handleClose = () => setOpen(false);
   const handleIframeLoad = () => setLoading(false);
+
+  const handleIframeError = () => {
+    setLoading(false);
+    setIframeError(true);
+  };
+
+  const reload = () => {
+    setLoading(true);
+    setIframeError(false);
+
+    if (iframeRef.current) {
+      iframeRef.current.src = iframeRef.current.src;
+    } else {
+      window.location.reload();
+    }
+  };
 
   return (
     <>
       <Box component="section">
         <Container className="flex flex-col justify-center items-center gap-8">
           <Fab
-            className="block mx-auto"
             color="primary"
             variant="extended"
             onClick={handleOpen}
+            sx={{ mx: "auto", display: "block" }}
           >
             <BookmarkAdd sx={{ mr: 1 }} />
             {t("label")}
           </Fab>
 
-          <div className="flex gap-8 text-xs">
+          <div className="flex gap-8 text-xs text-left">
             <div className="flex flex-col sm:flex-row gap-2">
               <GppGoodIcon />
               <p>
@@ -71,80 +119,74 @@ const Cta = () => {
         </Container>
       </Box>
 
-      <Modal
+      <Drawer
+        anchor="right"
         open={open}
         onClose={handleClose}
-        aria-labelledby="payment-modal"
-        aria-describedby="modal-containing-payment-page"
+        slotProps={{
+          paper: {
+            sx: {
+              width: { xs: "90%", md: "80%" },
+              display: "flex",
+              flexDirection: "column",
+            },
+          },
+        }}
       >
         <Box
           sx={{
-            position: "absolute",
-            top: "50%",
-            left: "50%",
-            transform: "translate(-50%, -50%)",
-            width: { xs: "95%", sm: "80%", md: "70%" },
-            height: "80%",
-            bgcolor: "background.paper",
-            boxShadow: 24,
-            borderRadius: 2,
-            overflow: "hidden",
             display: "flex",
-            flexDirection: "column",
+            justifyContent: "flex-end",
+            p: 1,
           }}
         >
-          <Box
-            sx={{
-              display: "flex",
-              justifyContent: "flex-end",
-              p: 1,
-              bgcolor: "primary.main",
-            }}
-          >
-            <IconButton
-              aria-label="close"
-              onClick={handleClose}
-              sx={{ color: "white" }}
-            >
-              <CloseIcon />
-            </IconButton>
-          </Box>
+          <IconButton aria-label={t("close")} onClick={handleClose}>
+            <CloseIcon />
+          </IconButton>
+        </Box>
 
-          <Box
-            sx={{
-              position: "relative",
-              flexGrow: 1,
-              display: "flex",
-              justifyContent: "center",
-              alignItems: "center",
-            }}
-          >
-            {loading && (
-              <Box
-                sx={{
-                  position: "absolute",
-                  display: "flex",
-                  justifyContent: "center",
-                  alignItems: "center",
-                  width: "100%",
-                  height: "100%",
-                  zIndex: 1,
-                }}
-              >
-                <CircularProgress />
-              </Box>
-            )}
+        <Box
+          sx={{
+            position: "relative",
+            flexGrow: 1,
+            display: "flex",
+            justifyContent: "center",
+            alignItems: "center",
+          }}
+          aria-busy={loading}
+        >
+          {loading && !iframeError && (
+            <Box
+              sx={{
+                position: "absolute",
+                display: "flex",
+                justifyContent: "center",
+                alignItems: "center",
+                width: "100%",
+                height: "100%",
+                zIndex: 1,
+              }}
+            >
+              <CircularProgress />
+            </Box>
+          )}
+          {iframeError ? (
+            <ErrorCard onRetry={reload} />
+          ) : (
             <iframe
+              ref={iframeRef}
               src="https://sun.eduzz.com/G9617J3PW1"
-              title="Payment Page"
+              title={t("iframeTitle")}
               width="100%"
               height="100%"
               onLoad={handleIframeLoad}
+              onError={handleIframeError}
+              loading="lazy"
               style={{ visibility: loading ? "hidden" : "visible" }}
             />
-          </Box>
+          )}
         </Box>
-      </Modal>
+      </Drawer>
     </>
   );
 };

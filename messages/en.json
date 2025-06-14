@@ -18,7 +18,11 @@
     "label": "Get the E-book",
     "payment": "Payment <br></br>100% Safe",
     "privacy": "Privacy <br></br>Protected",
-    "verified": "Verified <br></br>and Protected"
+    "verified": "Verified <br></br>and Protected",
+    "errorMessage": "Looks like something went wrong on our side. Please try again later or contact support.",
+    "retry": "Retry",
+    "close": "Close",
+    "iframeTitle": "Payment form for Sweet Life E-book"
   },
   "hero": {
     "title": "<strong>E-book:</strong> Sweet Life",
