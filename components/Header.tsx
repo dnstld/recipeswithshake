@@ -1,12 +1,7 @@
 "use client";
 
-import { useRouter } from "next/navigation";
-import React, { useEffect, useState } from "react";
-import {
-  DEFAULT_LOCALE,
-  LOCALE_COOKIE_NAME,
-  SUPPORTED_LOCALES,
-} from "@/i18n/constants";
+import React from "react";
+import { SUPPORTED_LOCALES } from "@/i18n/constants";
 import { useTranslations } from "next-intl";
 import {
   Box,
@@ -17,39 +12,15 @@ import {
 } from "@mui/material";
 import { selectClasses } from "@mui/material/Select";
 import CookieIcon from "@mui/icons-material/Cookie";
+import { useLocale } from "@/hooks/useLocale";
 
 const Header = () => {
-  const [locale, setLocale] = useState(DEFAULT_LOCALE);
-  const router = useRouter();
+  const { locale, changeLocale, isLoading, error } = useLocale();
   const t = useTranslations("header");
 
-  useEffect(() => {
-    const cookieLocale = document.cookie
-      .split("; ")
-      .find((row) => row.startsWith(`${LOCALE_COOKIE_NAME}=`))
-      ?.split("=")[1];
-
-    if (cookieLocale && SUPPORTED_LOCALES.includes(cookieLocale)) {
-      setLocale(cookieLocale);
-    } else {
-      const browserLocale = navigator.language.slice(0, 2);
-      const newLocale = SUPPORTED_LOCALES.includes(browserLocale)
-        ? browserLocale
-        : DEFAULT_LOCALE;
-
-      setLocale(newLocale);
-      document.cookie = `${LOCALE_COOKIE_NAME}=${newLocale}`;
-      router.refresh();
-    }
-  }, [router]);
-
-  const changeLocale = (newLocale: string) => {
-    if (newLocale !== locale && SUPPORTED_LOCALES.includes(newLocale)) {
-      setLocale(newLocale);
-      document.cookie = `${LOCALE_COOKIE_NAME}=${newLocale}`;
-      router.refresh();
-    }
-  };
+  if (error) {
+    console.warn("Locale error:", error);
+  }
 
   return (
     <>
