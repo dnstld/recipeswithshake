@@ -14,6 +14,7 @@ import {
   Modal,
   IconButton,
   CircularProgress,
+  Divider,
 } from "@mui/material";
 
 const Cta = () => {
@@ -39,7 +40,7 @@ const Cta = () => {
             {t("label")}
           </Fab>
 
-          <div className="flex gap-10 text-xs">
+          <div className="flex gap-8 text-xs">
             <div className="flex flex-col sm:flex-row gap-2">
               <GppGoodIcon />
               <p>
@@ -48,6 +49,7 @@ const Cta = () => {
                 })}
               </p>
             </div>
+            <Divider orientation="vertical" flexItem />
             <div className="flex flex-col sm:flex-row gap-2">
               <FingerprintIcon />
               <p>
@@ -56,6 +58,7 @@ const Cta = () => {
                 })}
               </p>
             </div>
+            <Divider orientation="vertical" flexItem />
             <div className="flex flex-col sm:flex-row gap-2">
               <ScreenLockPortraitIcon />
               <p>
