@@ -15,7 +15,7 @@ import CookieIcon from "@mui/icons-material/Cookie";
 import { useLocale } from "@/hooks/useLocale";
 
 const Header = () => {
-  const { locale, changeLocale, isLoading, error } = useLocale();
+  const { locale, changeLocale, error } = useLocale();
   const t = useTranslations("header");
 
   if (error) {
