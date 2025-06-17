@@ -10,6 +10,7 @@ import Header from "@/components/Header";
 import { AbstractIntlMessages } from "next-intl";
 import { getMessages } from "next-intl/server";
 import Footer from "@/components/Footer";
+import CustomAlert from "@/components/LocaleAlert";
 
 export const dynamic = "force-dynamic";
 
@@ -29,6 +30,7 @@ export async function generateMetadata() {
 export default function Home() {
   return (
     <main className="w-full">
+      <CustomAlert />
       <Header />
       <Hero />
       <Cta />

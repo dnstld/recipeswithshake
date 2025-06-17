@@ -1,43 +1,49 @@
 {
   "meta": {
     "title": "Vida Doce - Gisele Stein",
-    "description": "Descubra 10 deliciosas receitas doces ricas em proteínas para diversificar seus cafés da manhã, lanches ou refeições pós-treino — apoiando seus objetivos de perda de peso ou ganho de massa muscular"
+    "description": "Descubra 10 deliciosas receitas doces ricas em proteína para diversificar seus cafés da manhã, lanches ou refeições pós-treino — apoiando seus objetivos de perda de peso ou ganho de massa muscular"
   },
   "not-found": {
     "message": "Ops! A página que você está procurando não existe."
+  },
+  "alert": {
+    "locale": "Quer a versão em português do e-book? Acesse <link>receitascomshake.com.br</link>."
   },
   "header": {
     "title": "Receitas com Shake",
     "locale": {
       "pt": "Português",
-      "en": "English",
-      "es": "Español"
+      "en": "English"
     }
   },
   "cta": {
-    "label": "Adquira o E-book",
+    "label": "Adquirir o E-book",
     "payment": "Pagamento <br></br>100% Seguro",
     "privacy": "Privacidade <br></br>Protegida",
-    "verified": "Verificado <br></br>e Protegido"
+    "verified": "Verificado <br></br>e Protegido",
+    "errorMessage": "Parece que algo deu errado do nosso lado. Tente novamente mais tarde ou entre em contato com o suporte.",
+    "retry": "Tentar novamente",
+    "close": "Fechar",
+    "iframeTitle": "Formulário de pagamento do E-book Vida Doce"
   },
   "hero": {
     "title": "<strong>E-book:</strong> Vida Doce",
-    "subtitle": "<span>Delicie-se com </span><highlight>Doces Ricos em Proteínas </highlight><span>Saudáveis</span>",
-    "description": "Descubra 10 deliciosas receitas doces ricas em proteínas para diversificar seus cafés da manhã, lanches ou refeições pós-treino — apoiando seus objetivos de perda de peso ou ganho de massa muscular"
+    "subtitle": "<span>Delicie-se com </span><highlight>Doces Proteicos </highlight><span>e Saudáveis</span>",
+    "description": "Descubra 10 deliciosas receitas doces ricas em proteína para diversificar seus cafés da manhã, lanches ou refeições pós-treino — apoiando seus objetivos de perda de peso ou ganho de massa muscular"
   },
   "benefits": {
-    "benefit-1": "Desfrute de momentos mais doces e saudáveis com sua família",
-    "benefit-2": "Controle seus desejos por doces",
-    "benefit-3": "Perca peso ou ganhe massa muscular magra",
+    "benefit-1": "Aproveite momentos mais doces e saudáveis com a família",
+    "benefit-2": "Controle a vontade de comer doces",
+    "benefit-3": "Emagreça ou ganhe massa muscular magra",
     "benefit-4": "Previna doenças como obesidade, diabetes e sarcopenia",
     "benefit-5": "Diversifique suas fontes de proteína ao longo do dia"
   },
   "recipes": {
-    "title": "Receba 10 receitas doces ricas em proteínas com 5 opções quentes e 5 frias por aproximadamente <highlight>$5</highlight>",
-    "tooltip": "O preço varia ligeiramente com a taxa de câmbio — cerca de $5",
+    "title": "Receba 10 receitas doces e proteicas com 5 opções quentes e 5 geladas por cerca de <highlight>R$ 25</highlight>",
+    "tooltip": "O valor pode variar um pouco conforme a cotação do dólar — aproximadamente R$ 25",
     "cold-recipes": {
-      "title": "Receitas frias",
-      "description": "Smoothie de frutas, Iogurte com frutas, Overnight oats, Geladinho e Bombom de chocolate no copo."
+      "title": "Receitas geladas",
+      "description": "Vitamina de frutas, Iogurte com frutas, Overnight oats, Geladinho, e Bombom de colher."
     },
     "hot-recipes": {
       "title": "Receitas quentes",
@@ -45,16 +51,17 @@
     }
   },
   "gallery": {
-    "smoothie": "Smoothie de frutas",
+    "smoothie": "Vitamina de frutas",
     "yogurte": "Iogurte com frutas",
     "overnight": "Overnight oats",
     "geladinho": "Geladinho",
-    "bombom": "Bombom de chocolate no copo",
+    "bombom": "Bombom de colher",
     "panqueca": "Panqueca",
     "brownie": "Brownie",
     "bolo": "Bolo de caneca",
     "mingau": "Mingau de aveia",
-    "chocolate": "Chocolate quente"
+    "chocolate": "Chocolate quente",
+    "loading": "Carregando galeria"
   },
   "feedback": {
     "title": "Depoimentos de clientes",
@@ -62,60 +69,55 @@
       "name": "Giulia Vedovato",
       "alt": "Foto de Giulia Vedovato",
       "social": "@giuliavedovato",
-      "text": "Oi Gi, fiz a panqueca e adorei. Realmente satisfaz a vontade de comer algo doce, sacia bastante e é muito fácil de fazer."
+      "text": "Oi Gi, fiz a panqueca e amei. Realmente mata a vontade de comer doce, sacia bastante e é muito fácil de fazer."
     },
     "customer-2": {
       "name": "Felipe Augusto",
       "alt": "Foto de Felipe Augusto",
       "social": "@felipeugusto",
-      "text": "Gi, sou apaixonado por doces, especialmente os de amendoim. Aprendi a receita super fácil de Geladinho com pasta de amendoim e agora não consigo parar de fazer! Recomendo muito!"
+      "text": "Gi, sou apaixonado por doces, principalmente os com amendoim. Aprendi a receita super fácil do geladinho com pasta de amendoim e agora não consigo parar de fazer! Super recomendo!"
     },
     "customer-3": {
       "name": "Claudia Bassani",
       "alt": "Foto de Claudia Bassani",
       "social": "@claudia_c_a_bassani",
-      "text": "Adorei o smoothie de morango – parecia um milkshake! Além de ser super saboroso, realmente satisfaz a fome! Também foi super fácil de fazer!"
+      "text": "Adorei a vitamina de morango – parecia um milkshake! Além de super gostosa, realmente mata a fome! Também foi super fácil de fazer!"
     },
     "customer-4": {
       "name": "Rosângela Araújo",
       "alt": "Foto de Rosângela Araújo",
       "social": "@rosangela_hairstylist",
-      "text": "Gosto de todas as receitas do E-book, mas minha favorita é o bolo com pasta de amendoim; satisfaz minha vontade de doce e ainda é saboroso!"
+      "text": "Gosto de todas as receitas do E-book, mas a minha favorita é o bolo com pasta de amendoim; mata a vontade de doce e ainda é delicioso!"
     },
     "customer-5": {
       "name": "Mariele Aline",
       "alt": "Foto de Mariele Aline",
       "social": "@mariele9323",
-      "text": "Meu Deus, adorei o chocolate no copo! Está delicioso! Chocolate absolutamente divino — simplesmente o melhor! Essa combinação com uvas é perfeita!"
+      "text": "Meu Deus, amei o chocolate na caneca! Uma delícia! Chocolate simplesmente divino — o melhor! Essa combinação com uva é perfeita!"
     },
     "customer-6": {
       "name": "Thais Fernanda",
       "alt": "Foto de Thais Fernanda",
       "social": "@thais.almeida1",
-      "text": "Oi Gi! Adorei o E-book. Tem receitas muito bem elaboradas que são saciantes e também ajudam a satisfazer aquela vontade de doce! Adorei o iogurte e o smoothie com frutinhas, mas minha receita favorita é definitivamente o bolo de caneca de chocolate. É tão bom..."
+      "text": "Oi Gi! Amei o E-book. Tem receitas muito bem elaboradas, que saciam e ajudam a matar a vontade de doce! Adorei o iogurte e a vitamina com frutinhas, mas minha receita preferida é, com certeza, o bolo de caneca de chocolate. É bom demais…"
     }
   },
   "about": {
-    "title": "Quem sou eu?",
-    "alt": "Gi Toledo em seu escritório segurando um delicioso shake",
-    "me": "Gisele Toledo, 47 anos, brasileira",
-    "family": "Casada, mãe de dois filhos",
-    "entrepreneur": "Empreendedora no nicho de Bem-Estar e Emagrecimento há 13 anos",
-    "years": "Mais de 10.000 clientes em 13 anos",
-    "creator": "Criadora de infoprodutos desde julho de 2022",
-    "sweet": "Fundadora do Projeto Vida Doce desde fevereiro de 2023",
-    "shielded": "Fundadora do Projeto Mulheres Blindadas desde dezembro de 2024"
+    "alt": "Gi Toledo no escritório segurando um shake delicioso",
+    "name": "Gisele Toledo",
+    "from": "Brasileira, 47 anos, mãe de dois filhos",
+    "bio": "<span>Com mais de 13 anos na área de emagrecimento, atuei com Herbalife, Hinode, Luci Luci e Akmos — ajudando pessoas a se cuidarem, se sentirem confiantes e levarem uma vida mais saudável sem abrir mão do doce.</span><span>Nesse caminho, desenvolvi programas de bem-estar e lancei duas iniciativas com foco comunitário — o Projeto Vida Doce e o Projeto Mulheres Blindadas — com o objetivo de inspirar transformações duradouras de dentro para fora.</span>"
   },
   "questions": {
     "title": "Perguntas frequentes",
     "cta": "Quero o e-book",
     "question-1": {
       "question": "Como acessar os e-books após a compra?",
-      "answer": "Os e-books serão enviados para o e-mail que você cadastrou durante a compra (preste muita atenção ao preencher corretamente o campo de e-mail). Você também pode acessar seus produtos através do site ou aplicativo da Eduzz."
+      "answer": "Você receberá os e-books por e-mail (atenção ao preencher corretamente o campo de e-mail). Também é possível acessar seus produtos pelo site ou aplicativo da Eduzz."
     },
     "question-2": {
-      "question": "Existe alguma garantia?",
-      "answer": "Sim, há uma garantia de 7 dias. Se você concluir que os produtos digitais adquiridos não agregaram valor aos seus objetivos, pode solicitar o reembolso sem qualquer burocracia."
+      "question": "Tem garantia?",
+      "answer": "Sim, você tem 7 dias de garantia. Se concluir que os produtos digitais não contribuíram para os seus objetivos, poderá solicitar reembolso sem burocracia."
     },
     "question-3": {
       "question": "Quais são as formas de pagamento?",
@@ -126,7 +128,7 @@
       "answer": "Sim, basta adquirir ingredientes e suplementos zero açúcar, zero lactose (ou veganos) e zero glúten."
     },
     "question-5": {
-      "question": "Qual é o tempo de acesso aos E-books?",
+      "question": "Qual o tempo de acesso aos E-books?",
       "answer": "Acesso vitalício."
     }
   },
