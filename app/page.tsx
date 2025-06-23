@@ -30,19 +30,28 @@ export async function generateMetadata() {
 export default function Home() {
   return (
     <main className="w-full">
-      <CustomAlert />
-      <Header />
-      <Hero />
-      <Cta />
-      <Benefits />
-      <Recipes />
-      <Gallery />
-      <Cta />
-      <Feedback />
-      <About />
-      <Questions />
-      <Cta />
-      <Footer />
+      {process.env.NEXT_PUBLIC_APP_ENV === "production" ? (
+        <>
+          <Header />
+          <Hero />
+        </>
+      ) : (
+        <>
+          <CustomAlert />
+          <Header />
+          <Hero />
+          <Cta />
+          <Benefits />
+          <Recipes />
+          <Gallery />
+          <Cta />
+          <Feedback />
+          <About />
+          <Questions />
+          <Cta />
+          <Footer />
+        </>
+      )}
     </main>
   );
 }

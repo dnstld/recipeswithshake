@@ -29,7 +29,8 @@
   "hero": {
     "title": "<strong>E-book:</strong> Sweet Life",
     "subtitle": "<span>Indulge in Healthy </span><highlight>Protein-Packed </highlight><span>Treats</span>",
-    "description": "Discover 10 delicious protein-rich sweet recipes to diversify your breakfasts, snacks or post-workout meals — supporting your weight loss or muscle-building goals"
+    "description": "Discover 10 delicious protein-rich sweet recipes to diversify your breakfasts, snacks or post-workout meals — supporting your weight loss or muscle-building goals",
+    "coming-soon": "Coming soon"
   },
   "benefits": {
     "benefit-1": "Enjoy healthier, sweeter moments with your family",

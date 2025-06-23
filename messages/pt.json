@@ -29,7 +29,8 @@
   "hero": {
     "title": "<strong>E-book:</strong> Vida Doce",
     "subtitle": "<span>Delicie-se com </span><highlight>Doces Proteicos </highlight><span>e Saudáveis</span>",
-    "description": "Descubra 10 deliciosas receitas doces ricas em proteína para diversificar seus cafés da manhã, lanches ou refeições pós-treino — apoiando seus objetivos de perda de peso ou ganho de massa muscular"
+    "description": "Descubra 10 deliciosas receitas doces ricas em proteína para diversificar seus cafés da manhã, lanches ou refeições pós-treino — apoiando seus objetivos de perda de peso ou ganho de massa muscular",
+    "coming-soon": "Em breve"
   },
   "benefits": {
     "benefit-1": "Aproveite momentos mais doces e saudáveis com a família",

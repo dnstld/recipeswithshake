@@ -30,12 +30,18 @@ const Hero = () => {
           </h3>
           <p>{t("description")}</p>
         </div>
-        <div className="aspect-video flex justify-center relative w-full max-w-xs sm:max-w-sm md:max-w-md lg:max-w-sm xl:max-w-md mx-auto">
-          <iframe
-            className="absolute inset-0 w-full h-full bg-white shadow-lg"
-            src="https://www.youtube.com/embed/19g66ezsKAg"
-            allowFullScreen
-          />
+        <div className="aspect-video flex justify-center relative w-full max-w-xs sm:max-w-sm md:max-w-md lg:max-w-sm xl:max-w-md mx-auto items-center bg-white">
+          {process.env.NEXT_PUBLIC_APP_ENV === "production" ? (
+            <p className="text-4xl font-bold tracking-tight">
+              {t("coming-soon")}
+            </p>
+          ) : (
+            <iframe
+              className="absolute inset-0 w-full h-full bg-white shadow-lg"
+              src="https://www.youtube.com/embed/19g66ezsKAg"
+              allowFullScreen
+            />
+          )}
         </div>
       </Container>
     </Box>
