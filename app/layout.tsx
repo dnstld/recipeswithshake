@@ -1,12 +1,13 @@
 import { ReactNode } from "react";
 import { Geist, Geist_Mono } from "next/font/google";
-import { getLocale } from "next-intl/server";
 import { NextIntlClientProvider } from "next-intl";
 import { AppRouterCacheProvider } from "@mui/material-nextjs/v15-appRouter";
 import { ThemeProvider } from "@mui/material/styles";
 import theme from "@/mui/theme";
+import { headers } from "next/headers";
 
 import "./globals.css";
+import { getDomainConfig } from "./lib/domain-config";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -29,12 +30,21 @@ interface RootLayoutProps {
 export default async function RootLayout({
   children,
 }: Readonly<RootLayoutProps>) {
-  const locale = await getLocale();
+  const headersList = await headers();
+  const domainConfig = getDomainConfig(headersList);
 
   return (
-    <html lang={locale} className="min-h-screen">
+    <html lang={domainConfig.DEFAULT_LOCALE} className="min-h-screen">
       <head>
         <meta name="viewport" content="width=device-width, initial-scale=1" />
+        {/* Inject domain config as a global variable for client-side access */}
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `window.__DOMAIN_CONFIG__ = ${JSON.stringify(
+              domainConfig
+            )};`,
+          }}
+        />
       </head>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased min-h-screen`}

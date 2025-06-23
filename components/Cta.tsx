@@ -22,6 +22,7 @@ import {
   CardActions,
   Typography,
 } from "@mui/material";
+import { getClientDomainConfig } from "@/app/lib/domain-config";
 
 const ErrorCard = ({ onRetry }: { onRetry: () => void }) => {
   const t = useTranslations("cta");
@@ -44,6 +45,7 @@ const ErrorCard = ({ onRetry }: { onRetry: () => void }) => {
 
 const Cta = () => {
   const t = useTranslations("cta");
+  const domainConfig = getClientDomainConfig();
   const [open, setOpen] = useState(false);
   const [loading, setLoading] = useState(true);
   const [iframeError, setIframeError] = useState(false);
@@ -175,7 +177,7 @@ const Cta = () => {
           ) : (
             <iframe
               ref={iframeRef}
-              src="https://sun.eduzz.com/G9617J3PW1"
+              src={domainConfig.PAYMENT_URL}
               title={t("iframeTitle")}
               width="100%"
               height="100%"

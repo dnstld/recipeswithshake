@@ -1,16 +1,19 @@
 "use server";
 
+import { getDomainConfig } from "@/app/lib/domain-config";
 import { getRequestConfig } from "next-intl/server";
-import { cookies } from "next/headers";
-import { DEFAULT_LOCALE, LOCALE_COOKIE_NAME } from "./constants";
+import { cookies, headers } from "next/headers";
 
 export default getRequestConfig(async () => {
   try {
+    const headersList = await headers();
     const cookieStore = await cookies();
-
-    const cookieLocale = cookieStore.get(LOCALE_COOKIE_NAME)?.value;
-
-    const locale = cookieLocale || DEFAULT_LOCALE;
+    
+    // Get domain-specific configuration
+    const domainConfig = getDomainConfig(headersList);
+    
+    const cookieLocale = cookieStore.get(domainConfig.LOCALE_COOKIE_NAME)?.value;
+    const locale = cookieLocale || domainConfig.DEFAULT_LOCALE;
 
     const messages = (await import(`../messages/${locale}.json`)).default;
 
@@ -20,11 +23,14 @@ export default getRequestConfig(async () => {
     };
   } catch (error) {
     console.error("Failed to load locale configuration:", error);
+    
+    const headersList = await headers();
+    const domainConfig = getDomainConfig(headersList);
 
-    const messages = (await import(`../messages/${DEFAULT_LOCALE}.json`))
+    const messages = (await import(`../messages/${domainConfig.DEFAULT_LOCALE}.json`))
       .default;
     return {
-      locale: DEFAULT_LOCALE,
+      locale: domainConfig.DEFAULT_LOCALE,
       messages,
     };
   }
